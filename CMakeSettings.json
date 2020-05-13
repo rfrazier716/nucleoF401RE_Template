@@ -1,0 +1,41 @@
+﻿{
+  "configurations": [
+    {
+      "name": "ARMCC-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "-DCOMPILE_TYPE=\"ARMCC\"",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "intelliSenseMode": "windows-msvc-x86",
+      "inheritEnvironments": [],
+      "variables": []
+    },
+    {
+      "name": "ARMCC-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "-DCOMPILE_TYPE=\"ARMCC\"",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "variables": [],
+      "inheritEnvironments": []
+    },
+    {
+      "name": "Unit Tests",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\build\\${name}",
+      "installRoot": "${projectDir}\\build\\install\\${name}",
+      "cmakeCommandArgs": "-DCOMPILE_TYPE=UNIT_TESTS",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "msvc_x86" ],
+      "variables": []
+    }
+  ]
+}
